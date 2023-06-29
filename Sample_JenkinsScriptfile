@@ -1,0 +1,28 @@
+pipeline {
+    agent any
+
+    stages {
+        stage('Import new integration') {
+            steps {
+                bat '''
+                curl --location \
+                --header "Accept: application/json" \
+                -X POST \
+                --form "file=@SAMPLEMULTIPLY_INTEGRATION_01.00.0000.iar;type=application/json" \
+                https://testinstance-idevjxz332qf-ia.integration.ocp.oraclecloud.com/ic/home/?root=integrations&oj_Router=SampleMultipy_Integration#
+                '''
+            }
+        }
+
+        stage('Configure Rest Conn') {
+            steps {
+                bat '''
+                curl --header "Authorization: Basic RGV2b3BzX3VzZXI6T2ljX0plbmtpbnMjMjAyMw==" \
+                --header "X-HTTP-Method-Override:PATCH" \
+                --header "Content-Type:application/json" \
+                -d @restconnproperties.json https://testinstance-idevjxz332qf-ia.integration.ocp.oraclecloud.com/ic/home/?root=connection&oj_Router=SampleREST
+                '''
+            }
+        }
+    }
+}
