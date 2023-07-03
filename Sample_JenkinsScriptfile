@@ -46,8 +46,7 @@ steps
 { 
 	bat'''
 
-	curl --location --request PUT --header "Authorization: Basic ZGV2b3BzX3VzZXI6T2ljX0plbmtpbnMjMjAyMw==" --header "Content-Type:application/json" -d  @lookupNew.json https://testinstance-idevjxz332qf-ia.integration.ocp.oraclecloud.com/ic/api/integration/v1/lookups
-	curl -X PUT --header 'Authorization: Basic ZGV2b3BzX3VzZXI6T2ljX0plbmtpbnMjMjAyMw==' --header "Content-Type:application/json" -d  @Lookup.json https://integration.us.oraclecloud.com/ic/api/integration/v1/lookups/CountryLookup
+	curl --header "Authorization: Basic ZGV2b3BzX3VzZXI6T2ljX0plbmtpbnMjMjAyMw==" --header "Content-Type:application/json" -d  @lookupNew.json https://testinstance-idevjxz332qf-ia.integration.ocp.oraclecloud.com/ic/api/integration/v1/lookups
 
 	'''
 }
