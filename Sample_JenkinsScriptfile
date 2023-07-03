@@ -24,7 +24,7 @@ stage('Deactivate the Integration before Deployment')
 steps
 {
 bat '''
-curl -X POST --header "Authorization: Basic ZGV2b3BzX3VzZXI6T2ljX0plbmtpbnMjMjAyMw==" --header "Content-Type:application/json" --header "X-HTTP-Method-Override:PATCH" -d @C:/Docs/Git/ChandiniSample/deactive.json -d 'enableAsyncActivationMode=true' "https://testinstance-idevjxz332qf-ia.integration.ocp.oraclecloud.com/ic/api/integration/v1/integrations/SAMPLE_CHANDINI_01.00.0000.iar"
+curl -X POST --header "Authorization: Basic ZGV2b3BzX3VzZXI6T2ljX0plbmtpbnMjMjAyMw==" --header "Content-Type:application/json" --header "X-HTTP-Method-Override:PATCH" -d @C:/Docs/Git/ChandiniSample/deactive.json -d 'enableAsyncActivationMode=true' "https://testinstance-idevjxz332qf-ia.integration.ocp.oraclecloud.com/ic/api/integration/v1/integrations/SAMPLE_CHANDINI"
 '''
 }
 }
@@ -54,7 +54,7 @@ stage('Configuring a lookup')
 steps
 { 
 	bat'''
-	curl --location --request PUT --header "Authorization: Basic ZGV2b3BzX3VzZXI6T2ljX0plbmtpbnMjMjAyMw==" --header "Content-Type:application/json" -d  @lookup.json https://testinstance-idevjxz332qf-ia.integration.ocp.oraclecloud.com/ic/api/integration/v1/lookups/SAMPLE_LOOKUP
+	curl --location --request PUT --header "Authorization: Basic ZGV2b3BzX3VzZXI6T2ljX0plbmtpbnMjMjAyMw==" --header "Content-Type:application/json" -d  @lookup.json https://testinstance-idevjxz332qf-ia.integration.ocp.oraclecloud.com/ic/api/integration/v1/lookups/Sample_Lookup
 	'''
 }
 }
