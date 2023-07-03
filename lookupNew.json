@@ -1,23 +1,23 @@
 {
     "columns": [
-        "CountryCode",
-        "CountryName"
+        "StateCode",
+        "StateName"
     ],
     "rows": [
         {
             "rowData": [
-                "UK",
-                "United Kingdom"
+                "TS",
+                "Telangana"
             ]
         }
     ],
 	"rows": [
         {
             "rowData": [
-                "MX",
-                "Mexico"
+                "AP",
+                "Andhra Pradesh"
             ]
         }
     ],
-    "name": "CountryLookup"
+    "name": "StateLookup"
 }
