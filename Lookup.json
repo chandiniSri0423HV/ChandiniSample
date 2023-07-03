@@ -1,0 +1,23 @@
+{
+    "columns": [
+        "StateCode",
+        "StateName"
+    ],
+    "rows": [
+        {
+            "rowData": [
+                "AP",
+                "Andhra Pradesh"
+            ]
+        }
+    ],
+	"rows": [
+        {
+            "rowData": [
+                "TS",
+                "Telangana"
+            ]
+        }
+    ],
+    "name": "SAMPLE_LOOKUP"
+}
