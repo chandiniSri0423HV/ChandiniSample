@@ -18,6 +18,17 @@ curl -s "https://idcs-b0bf5647dbe34af4914cf420cba0294c.identity.oraclecloud.com/
 '''
 }
 }
+
+stage('Deactivate the Integration before Deployment')
+{
+steps
+{
+bat '''
+curl -X POST --header "Authorization: Basic ZGV2b3BzX3VzZXI6T2ljX0plbmtpbnMjMjAyMw==" --header "Content-Type:application/json" --header "X-HTTP-Method-Override:PATCH" -d @C:/Users/csrisailaxmiboddu/OneDrive-Hitachi Vantara/Documents/GitHub/ChandiniSample/deactive.json -d 'enableAsyncActivationMode=true' "https://testinstance-idevjxz332qf-ia.integration.ocp.oraclecloud.com/ic/api/integration/v1/integrations/SAMPLE_CHANDINI_01.00.0000.iar"
+'''
+}
+}
+
 stage('Deployment of IAR Files to OIC') 
 {
 steps
