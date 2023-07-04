@@ -52,14 +52,7 @@ pipeline {
 				'''
 			}
 		}
-		stage('Configuring a lookup')
-		{
-		steps { 
-				bat'''
-				curl --location --request PUT --header "Authorization: Basic ZGV2b3BzX3VzZXI6T2ljX0plbmtpbnMjMjAyMw==" --header "Content-Type:application/json" -d  @C:/Docs/Git/Sample_Config/CountryLookup.csv https://testinstance-idevjxz332qf-ia.integration.ocp.oraclecloud.com/ic/api/integration/v1/lookups/CountryLookup
-				'''
-			}
-		}
+		
 		
 		stage('Activation of the integration')
 		{
