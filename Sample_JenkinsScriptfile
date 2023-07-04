@@ -15,7 +15,7 @@ pipeline {
                 '''
             }
         }
-
+		
 		stage('Deactivation of integration') {
             steps {
                 bat '''
@@ -24,6 +24,7 @@ pipeline {
             }
         }
 		
+
         stage('Deployment of IAR Files to OIC') {
             steps {
                 bat '''
